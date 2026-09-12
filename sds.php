@@ -31,27 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         default:
             $correctAnswer = "Invalid operation";
     }
-    if (is_numeric($correctAnswer)) {
-        $funnyAnswers = [
-            $correctAnswer + 1,
-            $correctAnswer - 1,
-            $correctAnswer + 10,
-            $correctAnswer * 2,
-            420,
-            69,
-            "ayaw ko hilabti",
-            "20. ayaw pag buot"
-        ];
-
-      
-        do {
-            $funnyAnswer = $funnyAnswers[array_rand($funnyAnswers)];
-        } while ($funnyAnswer == $correctAnswer);
-
-        $result = " Answer: " . $funnyAnswer;
-    } else {
-        $result = $correctAnswer;
-    }
+   $result = $correctAnswer;
 }
 ?>
 
